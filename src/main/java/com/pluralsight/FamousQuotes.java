@@ -1,5 +1,6 @@
 package com.pluralsight;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class FamousQuotes {
@@ -22,7 +23,7 @@ public class FamousQuotes {
                 "You don’t have to see the whole staircase, just take the first step. — Martin Luther King Jr.",
         };
 
-        While (conditionLoop) {
+        While (conditionLoop); {
             try {
             System.out.println("\nEnter a number between 1-10 to display that quote: ");
                 System.out.println(Enter 'R' to show randon qoute.");
@@ -30,20 +31,23 @@ public class FamousQuotes {
 
                 string input = scanner.next();
 
+                if(input.equalsIgnoreCase()) {
+                    System.out.println(qoutes[randomIndex]);
+                } else {
+                    System.out.println(quotes[index - 1]);
 
-                System.out.println(favoriteQuotes[j-1]);
-            } catch (ArrayIndexOutOfBoundsException e) {
-                System.out.println("Error: your entry was not between 1 and 10...");
-                System.out.println("Exception message: " + e.getMessage());
-            }
 
-            System.out.print("View another quote (Y/N): ");
-            anotherQuote = scan.nextLine();
+                    System.out.print("View another quote (Y/N): ");
+                    anotherQuote = scan.nextLine();
 
-            if(!anotherQuote.equalsIgnoreCase("Y")){
-                condition = true;
+                    if(anotherQuote.equalsIgnoreCase("Y")){
+                        condition = true;
+                    }
+                } catch (Exception)
+                System.out.println("Invalid entry. Select a number between 1 and 10 or 'R' for random selcetion.");
+                scanner.nextLine();
             }
         }
-
+                scanner.close();{
     }
 }
