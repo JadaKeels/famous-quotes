@@ -6,7 +6,7 @@ public class FamousQuotes {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        boolean condition = false;
+        boolean conditionLoop = true;
         String anotherQuote;
 
         String[] favoriteQuotes = {
@@ -22,16 +22,15 @@ public class FamousQuotes {
                 "You don’t have to see the whole staircase, just take the first step. — Martin Luther King Jr.",
         };
 
-        for (int i = 0; i < favoriteQuotes.length; i++) {
-            System.out.println(favoriteQuotes[i]);
-        }
-
-        while(!condition){
-            System.out.print("\nPlease choose a number between 1 and 10 to display that quote: ");
-            int j = scan.nextInt();
-            scan.nextLine();
-
+        While (conditionLoop) {
             try {
+            System.out.println("\nEnter a number between 1-10 to display that quote: ");
+                System.out.println(Enter 'R' to show randon qoute.");
+                        System.out.print(Your choice: );
+
+                string input = scanner.next();
+
+
                 System.out.println(favoriteQuotes[j-1]);
             } catch (ArrayIndexOutOfBoundsException e) {
                 System.out.println("Error: your entry was not between 1 and 10...");
